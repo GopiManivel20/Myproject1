@@ -1,3 +1,14 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+
 .college-header{
 	background-color:#36b1ba;
 	color:white;
@@ -54,7 +65,17 @@
 	list-style: none;
 	display:flex;
 	justify-content:space-evenly;
+
 }
+.navigation1 ul li a{
+	text-decoration: none;
+}
+
+.navigation1 ul li:hover{
+	background-color: gray;
+	border-radius: 5px;
+}
+
 .navigation1 a{
 	color: white;
 }
@@ -113,7 +134,7 @@
 	margin-left:100px;
 	margin-top: 20px;
 	display: flex;
-	gap: 30px;
+	/* gap: 30px; */
 }
 .college img{
 	width:400px;
@@ -127,12 +148,13 @@
 	/* background-color: #36b1ba; */
 }
 .imgbox1{
-	padding: 10px;
+	padding: 5px;
 	width: 500px;
 	height: 300px;
-	background-color:#a2a2a3;
-	overflow-y: auto;
-	box-shadow: 10px 10px 10px #be9ede;
+	background-color:#f7f7fd;
+	overflow-y:visible;
+	/* background-color: transparent; */
+	/* box-shadow: 10px 10px 10px #be9ede; */
 }
 .imgbox1 button{
 	padding: 5px;
@@ -141,11 +163,14 @@
 	border-radius: 5px;
 }
 .event{
-	margin: 30px;
+	margin: 10px;
 	
 }
 .event p,button:hover{
 	cursor: pointer;
+}
+.event p:hover{
+	color: #ae6fed;
 }
 footer{
 	background-color: #36b1ba;
@@ -184,8 +209,95 @@ footer{
 	text-align: center;
 }
 .nmcpic img{
-	width: 100%;
+	width: 100%; 
 }
+
 .backcolor{
 	background-color: #012144;
+}
+
+/* .slider-container {
+	display: flex;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+  }
+
+  .slide {
+	min-width: 100%;
+	height: 100vh;
+	transition: transform 0.5s ease-in-out;
+  }
+
+  .slide:nth-child(1) { background: #d10e0e; }
+  .slide:nth-child(2) { background: #b60a51; }
+  .slide:nth-child(3) { background: #28cc0b; }
+
+  .nav-buttons {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	transform: translateY(-50%);
+  }
+
+  .nav-buttons button {
+	padding: 10px 20px;
+	background: #fff;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+  } */
+
+@media (max-width: 768px) {
+    .mainbox {
+        flex-direction: column;
+        text-align: center;
+    }
+
+	.college {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+	.footer {
+        flex-direction: column;
+        text-align: center;
+		margin-top: 0px;
+    }
+	.navigation1 ul{
+		gap: 5px;
+	}
+
+	.navigation1 ul{
+		display:flex;
+		flex-direction:row;
+		justify-content: space-evenly;
+		overflow-x:auto;	
+	}
+	.navigation1 ul li:hover{
+		background-color: gray;
+		border-radius: 5px;
+	}
+
+	.logo{
+		display: inline;
+	}
+	.college-header{
+		display: block;
+		margin-top:0%;
+	}
+	.college-title{
+		position: absolute;
+		top:0px;
+	}
+	.navigation{
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		}
+
 }
